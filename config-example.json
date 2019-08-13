@@ -1,46 +1,90 @@
 {
-	"bridge": {
-		"name": "Homebridge",
-		"username": "CC:22:3D:E3:CE:22",
-		"pin": "123-45-678"
-	},
-
-	"platforms": [
-				{
-				  "platform": "InsteonLocal",
-				  "name": "Insteon Local Platform",
-				  "user": "<username from Insteon app>",
-				  "pass": "<password from Insteon app>",
-				  "host": "<local IP of your Insteon hub>",
-				  "port": "<port from Insteon app [usually 25105]>",
-				  "model": "2245",
-				  "refresh":"300",
-				  "server_port": "3000",
-				  "keepAlive": "3600",
-				  "devices": [
-								{ 
-									"name": "Great Room Lamp",
-								  	"deviceID" : "<Insteon ID>",
-								  	"dimmable" : "yes",
-								  	"deviceType" : "lightbulb",
-								  	"controllers" : ["<Insteon ID>","<Insteon ID>"]
-								},
-								{
-									"name": "FR Lamp",
-									"deviceID": "<Insteon ID>",
-									"dimmable": "no",
-									"groupID": "30",
-									"keypadbtn": "F",
-									"groupMembers": "AABBCC,XXYYZZ,DDEEFF",
-									"deviceType": "scene"
-								}		
-            				]
-				}
-				],
-	
-	"accessories": [
-
-   ]
-
-}
+    "description": "Hubitat Insteon Integration",
+    "accessories": [],
+    "platforms": [
+        {
+        "platform": "InsteonLocal",
+        "name": "Insteon Server",
+        "user": "[Insteon Hub Username]",
+        "pass": "[Insteon Hub Password",
+        "host": "[IP of your Node.js server]",
+        "port": "25105",
+        "model": "2245",
+        "server_port": "3500",
+        "devices": [
+          {
+            "name": "Kitchen Light",
+            "deviceID": "[Insteon Device ID]",
+            "dimmable": "no",
+            "deviceType": "lightbulb"
+          },
+          {
+            "name": "Dining Room Light",
+            "deviceID": "[Insteon Device ID]",
+            "dimmable": "yes",
+            "deviceType": "lightbulb"
+          },
+          {
+            "name": "Floor Lamp",
+            "deviceID": "[Insteon Device ID]",
+            "dimmable": "no",
+            "deviceType": "lightbulb"
+          },
+          {
+            "name": "Deck Light",
+            "deviceID": "[Insteon Device ID]",
+            "dimmable": "yes",
+            "deviceType": "lightbulb"
+          },
+          {
+            "name": "Master Bedroom Light",
+            "deviceID": "[Insteon Device ID]",
+            "dimmable": "yes",
+            "deviceType": "lightbulb"
+          },
+          {
+            "name": "Porch Light",
+            "deviceID": "[Insteon Device ID]",
+            "dimmable": "yes",
+            "deviceType": "lightbulb"
+          },
+          {
+            "name": "Table Lamp",
+            "deviceID": "[Insteon Device ID]",
+            "dimmable": "yes",
+            "deviceType": "lightbulb"
+          },
+          {
+            "name": "Toilet Leak Sensor",
+            "deviceID": "[Insteon Device ID]",
+            "deviceType": "leaksensor"
+          },
+          {
+            "name": "Front Door Sensor",
+            "deviceID": "[Insteon Device ID]",
+            "deviceType": "contactsensor"
+          },
+          {
+            "name": "Bathroom Exhaust Fan",
+            "deviceID": "[Insteon Device ID]",
+            "dimmable": "no",
+            "deviceType": "lightbulb"
+          },
+          {
+            "name": "ioLinc",
+            "deviceID": "[Insteon Device ID]",
+            "dimmable": "no",
+            "deviceType": "lightbulb"
+          },
+          {
+          "name": "Keypad",
+          "deviceID": "[Insteon Device ID]",
+          "dimmable": "yes",
+          "deviceType": "scene"
+          },
+          
+        ]
+      }
+    ]
+  }
 
