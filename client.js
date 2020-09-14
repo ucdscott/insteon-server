@@ -1,6 +1,6 @@
 var websocket = require('ws')
 
-var host = 'ws://127.0.0.1:8080'
+var host = 'ws://127.0.0.1:9595'
 var connection = new websocket(host)
 
 connection.onopen = function () {
